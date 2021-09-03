@@ -14,8 +14,8 @@ class Auth extends CI_Controller
             redirect('user');
         }
 
-        $this->form_validation->set_rules('username', 'Username', 'trim|required', ['required' => 'Masukan Username !']);
-        $this->form_validation->set_rules('password', 'Password', 'trim|required', ['required' => 'Masukan Password !']);
+        $this->form_validation->set_rules('username', 'Username', 'trim|required', ['required' => 'Username wajib diisi.']);
+        $this->form_validation->set_rules('password', 'Password', 'trim|required', ['required' => 'Password wajib diisi.']);
 
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Halaman Login';
@@ -40,21 +40,21 @@ class Auth extends CI_Controller
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'username' => $user['username'],
-                        'role_id' => $user['role_id'],
+                        // 'role_id' => $user['role_id'],
                         'id_user_detail' => $user['id_user_detail'],
                         // 'id_ruangan' => $ruangan['id_ruangan'],
                         // 'id_submenu' => $submenu2['id_submenu']
                     ];
                     $this->session->set_userdata($data);
-                    if ($user['role_id'] == 1) {
-                        redirect('master');
-                    }
-                    if ($user['role_id'] == 2) {
+                    // if ($user['role_id'] == 1) {
+                    //     redirect('master');
+                    // }
+                    // if ($user['role_id'] == 2) {
                         redirect('admin');
-                    } else {
-                        redirect('user');
-                        // redirect('' . $submenu2['url'] . '');
-                    }
+                    // } else {
+                    //     redirect('user');
+                    //     // redirect('' . $submenu2['url'] . '');
+                    // }
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-warning">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>

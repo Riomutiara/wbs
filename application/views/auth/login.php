@@ -38,7 +38,7 @@
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button> -->
 
   <!-- ======= Header ======= -->
 
@@ -80,22 +80,26 @@
 
         <div class="row" data-aos="fade-in">
 
-
+          <?= $this->session->flashdata('message'); ?>
 
           <div class="col-lg-6 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-group col-md-12">
-                <label for="name">Username</label>
-                <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group col-md-12">
-                <label for="name">Password</label>
-                <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
-              <div class="text-center"><button type="submit">Login</button></div>
-            </form>
+            <div class="php-email-form">
+              <form action="<?php base_url('auth'); ?>" method="post">
+                <div class="form-group col-md-12">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" id="username" class="form-control" id="name" value="<?= set_value('username'); ?>" />
+                  <?= form_error('username', '<small><span class="text-danger">', '</span></small>'); ?>
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="name">Password</label>
+                  <input type="password" class="form-control" name="password" id="password" />
+                  <?= form_error('password', '<small><span class="text-danger">', '</span></small>'); ?>
+                </div>
+                <br>
+                <div class="text-center"><button type="submit" class="btn btn-primary btn-block">Masuk</button></div>
+              </form>
+            </div>
+
           </div>
 
         </div>

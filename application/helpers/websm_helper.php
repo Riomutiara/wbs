@@ -5,24 +5,24 @@ function is_logged_in()
     $ci = get_instance();
     if (!$ci->session->userdata('username')) {
         redirect('auth');
-    } else {
-        $role_id = $ci->session->userdata('role_id');
-        // $user_id = $ci->session->userdata('id_user_detail');
-        $role = $ci->uri->segment(1);
-
-        $queryMenu = $ci->db->get_where('user_menu', ['role' => $role])->row_array();
-        $menu_id = $queryMenu['id'];
-
-        $userAccess = $ci->db->get_where('user_access_menu', [
-            'role_id' => $role_id,
-            'menu_id' => $menu_id,
-            // 'id_user_detail' => $user_id
-        ]);
-
-        if ($userAccess->num_rows() < 1 ) {
-            redirect('auth/blocked');
-        }
     }
+    // $role_id = $ci->session->userdata('role_id');
+    // // $user_id = $ci->session->userdata('id_user_detail');
+    // $role = $ci->uri->segment(1);
+
+    // $queryMenu = $ci->db->get_where('user_menu', ['role' => $role])->row_array();
+    // $menu_id = $queryMenu['id'];
+
+    // $userAccess = $ci->db->get_where('user_access_menu', [
+    //     'role_id' => $role_id,
+    //     'menu_id' => $menu_id,
+    //     // 'id_user_detail' => $user_id
+    // ]);
+
+    // if ($userAccess->num_rows() < 1 ) {
+    //     redirect('auth/blocked');
+    // }
+
 }
 
 function check_access($role_id, $menu_id)
