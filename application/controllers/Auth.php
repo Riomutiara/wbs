@@ -50,33 +50,39 @@ class Auth extends CI_Controller
                     //     redirect('master');
                     // }
                     // if ($user['role_id'] == 2) {
-                        redirect('admin');
+                    redirect('admin');
                     // } else {
                     //     redirect('user');
                     //     // redirect('' . $submenu2['url'] . '');
                     // }
                 } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-warning">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-                    <h5 class="text-warning"><i class="fa fa-exclamation-triangle"></i> Warning</h5> Password Anda Salah.
-                </div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Password Anda Salah.!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>');
                     redirect('auth');
                 }
             } else {
                 $this->session->set_flashdata(
                     'message',
-                    '<div class="alert alert-warning">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-                    <h5 class="text-warning"><i class="fa fa-exclamation-triangle"></i> Warning</h5> User Tidak Aktif.
-                </div>'
+                    '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    User Tidak Aktif.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>'
                 );
                 redirect('auth');
             }
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-warning">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-            <h3 class="text-warning"><i class="fa fa-exclamation-triangle"></i> Warning</h3> User Tidak Terdaftar.
-        </div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            User tidak terdaftar.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
             redirect('auth');
         }
     }
@@ -99,7 +105,7 @@ class Auth extends CI_Controller
         $data['title'] = 'Akses tidak dizinkan';
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
-        
+
         $this->load->view('auth/blocked', $data);
     }
 }

@@ -558,6 +558,31 @@ class User extends CI_Controller
         echo json_encode($output);
     }
 
+    public function tabelLaporan()
+    {
+        $fetch_data = $this->User_model->make_datatables_laporan();
+        $data = array();
+        $no = $_POST['start'];
+        foreach ($fetch_data as $row) {
+            $no++;
+            $sub_array = array();
+            $sub_array[] = $no;
+            $sub_array[] = $row->id_pengaduan;
+            $sub_array[] = $row->tanggal_kejadian;
+            $sub_array[] = $row->lokasi_kejadian;
+            $sub_array[] = '<button type="button" class="btn btn-warning btn-sm print" id="' . $row->id_pengaduan . '" data-toggle="tooltip" title="Hapus">Print </button>';
+            $data[] = $sub_array;
+        }
+
+        $output = array(
+            "draw"                => intval($_POST['draw']),
+            "recordsTotal"        => $this->User_model->get_all_data_laporan(),
+            "recordsFiltered"     => $this->User_model->get_filtered_data_laporan(),
+            "data"                => $data
+        );
+        echo json_encode($output);
+    }
+
     public function tambahKegiatan()
     {
         if ($_POST['action'] == 'add') {

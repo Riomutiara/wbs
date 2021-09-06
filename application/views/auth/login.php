@@ -77,11 +77,8 @@
           <h2>Login WBS</h2>
           <h5>RS Jiwa Prof. HB. Saanin Padang</h5>
         </div>
-
+        <?= $this->session->flashdata('message'); ?>
         <div class="row" data-aos="fade-in">
-
-          <?= $this->session->flashdata('message'); ?>
-
           <div class="col-lg-6 mt-5 mt-lg-0 d-flex align-items-stretch">
             <div class="php-email-form">
               <form action="<?php base_url('auth'); ?>" method="post">

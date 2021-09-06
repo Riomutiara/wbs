@@ -379,6 +379,76 @@ class User_model extends CI_Model
 
 
 
+
+
+
+
+
+
+
+
+    // DATATABLE LAPORAN    
+    // var $order_column11 = array(null, 'tanggal_kejadian', 'nama_tahun', null);
+
+    public function make_query_laporan()
+    {
+        // if ($this->input->post('idUser')) {
+        //     $this->db->where('kegiatan.id_user_detail', $this->input->post('idUser'));
+        // }
+
+        $this->db->select('*');
+        $this->db->from('pengaduan');
+        // $this->db->join('tahun', 'tahun.tahun_id = kegiatan.tahun_id', 'LEFT');
+
+        if (isset($_POST["search"]["value"])) {
+            $this->db->like('pengaduan.id_pengaduan', $_POST["search"]["value"]);
+        }
+
+        // if (isset($_POST["order"])) {
+        //     $this->db->order_by($this->order_column11[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
+        // } else {
+            $this->db->order_by('id_pengaduan', 'DESC');
+        // }
+    }
+
+    public function make_datatables_laporan()
+    {
+        $this->make_query_laporan();
+
+        if ($_POST["length"] != -1) {
+            $this->db->limit($_POST['length'], $_POST['start']);
+        }
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_filtered_data_laporan()
+    {
+        $this->make_query_laporan();
+        $query = $this->db->get();
+
+        return $query->num_rows();
+    }
+
+    public function get_all_data_laporan()
+    {
+        $this->db->select("*");
+        $this->db->from('pengaduan');
+        return $this->db->count_all_results();
+    }
+    // END DATATABLE KEGIATAN
+
+
+
+
+
+
+
+
+
+
+
+
     // -------------------------------------------------
     // PENGUKURAN KINERJA
     // -------------------------------------------------

@@ -15,17 +15,21 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="<?= base_url(); ?>assets/assets/vendor/jquery/jquery.min.js"></script>
 
     <!-- Vendor CSS Files -->
     <link href="<?= base_url(); ?>assets/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/assets/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/assets/vendor/aos/aos.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="<?= base_url(); ?>assets/assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/datatables/datatables.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: iPortfolio - v1.5.1
@@ -60,10 +64,10 @@
                 <ul>
                     <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
                     <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-                    <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                    <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-                    <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
-                    <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+                    <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Statistik</span></a></li>
+                    <li><a href="#portfolio"><i class="bx bx-book-content"></i> Laporan</a></li>
+                    <!-- <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
+                    <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li> -->
 
                 </ul>
             </nav><!-- .nav-menu -->
@@ -87,114 +91,74 @@
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container">
-
                 <div class="section-title">
                     <h2>Selamat datang di Whistleblowing Systems (WBS) Rumah Sakit Jiwa Prof. HB. Saanin Padang.</h2>
-                    <p class="text-center">
-                        Definisi Whistleblowing:
-                    </p>
-                    <p>
-                        Seseorang yang melaporkan perbuatan dugaan tindak pidana korupsi yang terjadi di Rumah Sakit Jiwa Prof. HB. Saanin Padang, atau pihak terkait lainnya yang memiliki akses informasi yang memadai atas terjadinya dugaan tindak pidana korupsi tersebut. Pelapor dijamin serta diberikan perlindungan oleh Pimpinan RS.
-                    </p>
-                    <p>
-                        WBS merupakan bagian dari sistem penanganan pengaduan pegawai dan masyarakat terpadu yang memfokuskan pada penanganan dugaan tindak pidana korupsi.
-                    </p>
-                    <p>
-                        Pengaduan dari pegawai dan masyarakat adalah salah satu bentuk peran serta dalam pengawasan terhadap Rumah Sakit Jiwa Prof. HB. Saanin Padang yang perlu mendapatkan tanggapan dengan cepat, tepat dan dapat dipertanggungjawabkan oleh Rumah Sakit Jiwa Prof. HB. Saanin Padang.
-                    </p>
-                    <p>
-                        Kriteria Whistleblower:
-                    </p>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
-                        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>UI/UX Designer &amp; Web Developer.</h3>
-                        <p class="font-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
+                <div class="row content">
+                    <div class="col-lg-12" data-aos="fade-right">
+                        <p class="text-center">
+                            Definisi Whistleblowing:
                         </p>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 1 May 1995</li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com</li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +123 456 7890</li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>City:</strong> City : New York, USA</li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 30</li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Master</li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>PhEmailone:</strong> email@example.com</li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
-                                </ul>
-                            </div>
-                        </div>
                         <p>
-                            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+                            Seseorang yang melaporkan perbuatan dugaan tindak pidana korupsi yang terjadi di Rumah Sakit Jiwa Prof. HB. Saanin Padang, atau pihak terkait lainnya yang memiliki akses informasi yang memadai atas terjadinya dugaan tindak pidana korupsi tersebut. Pelapor dijamin serta diberikan perlindungan oleh Pimpinan RS.
                         </p>
+                        <p>
+                            WBS merupakan bagian dari sistem penanganan pengaduan pegawai dan masyarakat terpadu yang memfokuskan pada penanganan dugaan tindak pidana korupsi.
+                        </p>
+                        <p>
+                            Pengaduan dari pegawai dan masyarakat adalah salah satu bentuk peran serta dalam pengawasan terhadap Rumah Sakit Jiwa Prof. HB. Saanin Padang yang perlu mendapatkan tanggapan dengan cepat, tepat dan dapat dipertanggungjawabkan oleh Rumah Sakit Jiwa Prof. HB. Saanin Padang.
+                        </p>
+                        <p>
+                            Kriteria Whistleblower:
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> Ada penyimpangan kasus yang dilaporkan</li>
+                            <li><i class="ri-check-double-line"></i> Menjelaskan dimana, kapan kasus tersebut dilakukan</li>
+                            <li><i class="ri-check-double-line"></i> Siapa pejabat/pegawai RS. Jiwa Prof. HB. Saanin Padang yang melakukan atau terlibat</li>
+                            <li><i class="ri-check-double-line"></i> Bagaimana cara perbuatan tersebut dilakukan</li>
+                            <li><i class="ri-check-double-line"></i> Dilengkapi dengan bukti permulaan (data, dokumen, video, gambar dan rekaman) yang mendukung/menjelaskan adanya dugaan Tindak Pidana Korupsi</li>
+                        </ul>
                     </div>
                 </div>
+
+
 
             </div>
-        </section><!-- End About Section -->
+        </section>
+        <br><br><br><br><br><br><br><br><!-- End About Section -->
 
         <!-- ======= Facts Section ======= -->
-        <section id="facts" class="facts">
+        <section id="resume" class="facts">
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Facts</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Total Laporan</h2>
                 </div>
-
-                <div class="row no-gutters">
-
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                        <div class="count-box">
-                            <i class="icofont-simple-smile"></i>
-                            <span data-toggle="counter-up">232</span>
-                            <p><strong>Happy Clients</strong> consequuntur quae</p>
-                        </div>
+                <?php
+                $id_user = $this->session->userdata('id_user_detail');
+                $queryLaporan = "SELECT COUNT(*) AS jmlRecord FROM pengaduan";
+                $Laporan = $this->db->query($queryLaporan)->result();
+                ?>
+                <?php foreach ($Laporan as $row) : ?>
+                    <div class="row no-gutters">
+                        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+                            <div class="count-box">
+                                <i class="icofont-simple-smile"></i>
+                                <span data-toggle="counter-up"><?= $row->jmlRecord; ?></span>
+                                <p><strong>Total Laporan</strong> <br>laporan masuk</p>
+                            </div>
+                        </div>                    
                     </div>
+                <?php endforeach; ?>
 
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="count-box">
-                            <i class="icofont-document-folder"></i>
-                            <span data-toggle="counter-up">521</span>
-                            <p><strong>Projects</strong> adipisci atque cum quia aut</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="count-box">
-                            <i class="icofont-live-support"></i>
-                            <span data-toggle="counter-up">1,463</span>
-                            <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="count-box">
-                            <i class="icofont-users-alt-5"></i>
-                            <span data-toggle="counter-up">15</span>
-                            <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
-                        </div>
-                    </div>
-
-                </div>
 
             </div>
-        </section><!-- End Facts Section -->
+        </section>
+        <!-- End Facts Section -->
 
         <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills section-bg">
+        <!-- <section id="skills" class="skills section-bg">
             <div class="container">
 
                 <div class="section-title">
@@ -257,10 +221,11 @@
                 </div>
 
             </div>
-        </section><!-- End Skills Section -->
+        </section> -->
+        <!-- End Skills Section -->
 
         <!-- ======= Resume Section ======= -->
-        <section id="resume" class="resume">
+        <!-- <section id="resume" class="resume">
             <div class="container">
 
                 <div class="section-title">
@@ -323,127 +288,35 @@
                 </div>
 
             </div>
-        </section><!-- End Resume Section -->
+        </section> -->
+        <!-- End Resume Section -->
 
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio section-bg">
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Portfolio</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Tabel Laporan</h2>
                 </div>
 
-                <div class="row" data-aos="fade-up">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                <table class="table table-hover" id="tabel_laporan">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">ID Laporan</th>
+                            <th scope="col">Tanggal Kejadian</th>
+                            <th scope="col">Lokasi Kejadian </th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                </table>
 
             </div>
         </section><!-- End Portfolio Section -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
+        <!-- <section id="services" class="services">
             <div class="container">
 
                 <div class="section-title">
@@ -485,10 +358,11 @@
                 </div>
 
             </div>
-        </section><!-- End Services Section -->
+        </section> -->
+        <!-- End Services Section -->
 
         <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials section-bg">
+        <!-- <section id="testimonials" class="testimonials section-bg">
             <div class="container">
 
                 <div class="section-title">
@@ -556,10 +430,11 @@
                 </div>
 
             </div>
-        </section><!-- End Testimonials Section -->
+        </section> -->
+        <!-- End Testimonials Section -->
 
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
+        <!-- <section id="contact" class="contact">
             <div class="container">
 
                 <div class="section-title">
@@ -630,9 +505,30 @@
                 </div>
 
             </div>
-        </section><!-- End Contact Section -->
+        </section> -->
+        <!-- End Contact Section -->
 
     </main><!-- End #main -->
+
+    <div class="modal" tabindex="-1" id="modalView">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -652,6 +548,8 @@
 
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
+
+
     <!-- Vendor JS Files -->
     <script src="<?= base_url(); ?>assets/assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?= base_url(); ?>assets/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -667,6 +565,37 @@
 
     <!-- Template Main JS File -->
     <script src="<?= base_url(); ?>assets/assets/js/main.js"></script>
+    <script src="<?= base_url(); ?>assets/datatables/datatables.min.js" type="text/javascript"></script>
+    <!-- <script src="<?= base_url(); ?>assets/vendors/js/tables/datatable/dataTables.buttons.min.js" type="text/javascript"></script> -->
+    <!-- <script src="<?= base_url(); ?>assets/js/scripts/tables/datatables/datatable-advanced.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#tabel_laporan').DataTable({
+                "serverSide": true,
+                "order": [],
+                "ajax": {
+                    "url": "<?php echo base_url(); ?>user/tabelLaporan",
+                    "type": "POST",
+                    // "data": function(data) {
+                    //     data.idUser = $('#id_user2').val();
+                    // }
+                },
+                columnDefs: [{
+                    orderable: false,
+                    targets: [0]
+                }],
+                autoWidth: !1
+            });
+
+            $(document).on('click', '.print', function() {
+                alert('View');
+            });
+
+
+        });
+    </script>
 
 </body>
 
