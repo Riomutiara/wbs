@@ -18,7 +18,7 @@ class User extends CI_Controller
         // $this->load->view('templates/header', $data);
         // $this->load->view('templates/topbar', $data);
         // $this->load->view('templates/topbar_menu', $data);
-        $this->load->view('user/laporan');
+        $this->load->view('user/laporan_new');
         // $this->load->view('templates/footer');
     }
 

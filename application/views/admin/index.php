@@ -50,13 +50,14 @@
 
             <div class="profile">
                 <img src="<?= base_url(); ?>assets/assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+                <h1 class="text-light"><a href="index.html">Admin WBS</a></h1>
                 <div class="social-links mt-3 text-center">
-                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                     <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                     <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                     <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+                    <a class="dropdown-item" href="<?= base_url(); ?>auth/logout"><i class="bx fa-lg bx-exit"></i></a>
                 </div>
             </div>
 
@@ -133,24 +134,21 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Total Laporan</h2>
+                    <h2>Statistik</h2>
                 </div>
                 <?php
-                $id_user = $this->session->userdata('id_user_detail');
-                $queryLaporan = "SELECT COUNT(*) AS jmlRecord FROM pengaduan";
-                $Laporan = $this->db->query($queryLaporan)->result();
+                $queryLaporan = "SELECT * FROM pengaduan";
+                $Laporan = $this->db->query($queryLaporan)->num_rows();
                 ?>
-                <?php foreach ($Laporan as $row) : ?>
-                    <div class="row no-gutters">
-                        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                            <div class="count-box">
-                                <i class="icofont-simple-smile"></i>
-                                <span data-toggle="counter-up"><?= $row->jmlRecord; ?></span>
-                                <p><strong>Total Laporan</strong> <br>laporan masuk</p>
-                            </div>
-                        </div>                    
+                <div class="row no-gutters">
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+                        <div class="count-box">
+                            <i class="icofont-tasks-alt"></i>
+                            <span data-toggle="counter-up"><?= $Laporan; ?></span>
+                            <p><strong>Total Laporan</strong> <br>laporan masuk</p>
+                        </div>
                     </div>
-                <?php endforeach; ?>
+                </div>
 
 
             </div>
@@ -296,10 +294,10 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Tabel Laporan</h2>
+                    <h2>Laporan</h2>
                 </div>
 
-                <table class="table table-hover" id="tabel_laporan">
+                <table class="table table-hover table-bordered table-sm" id="tabel_laporan">
                     <thead>
                         <tr>
                             <th scope="col">No</th>

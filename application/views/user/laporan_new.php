@@ -67,7 +67,8 @@
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
                     <!-- <img src="<?= base_url(); ?>assets/img/logo/ww.png" alt="" class="img-fluid"> -->
-                    <h1>WHISTLEBLOWING SYSTEMS (WBS)</h1>
+                    <h1>Laman Pelaporan Budaya Adil (Just Culture)</h1>
+                    <!-- <h1>WHISTLEBLOWING SYSTEMS (WBS)</h1> -->
                     <h2>RS. Jiwa Prof. HB. Saanin Padang</h2>
 
                 </div>
@@ -105,32 +106,29 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Selamat datang di Whistleblowing Systems (WBS) Rumah Sakit Jiwa Prof. HB. Saanin Padang.</h2>
+                    <h2>Selamat datang di Laman Pelaporan Budaya Adil (Just Culture) Bagi Pelapor Terkait Budaya Keselamatan Rumah Sakit Jiwa Prof. HB. Saanin Padang.</h2>
                 </div>
 
                 <div class="row content">
                     <div class="col-lg-12">
                         <p class="text-center">
-                            Definisi Whistleblowing:
+                            Definisi :
                         </p>
                         <p>
-                            Seseorang yang melaporkan perbuatan dugaan tindak pidana korupsi yang terjadi di Rumah Sakit Jiwa Prof. HB. Saanin Padang, atau pihak terkait lainnya yang memiliki akses informasi yang memadai atas terjadinya dugaan tindak pidana korupsi tersebut. Pelapor dijamin serta diberikan perlindungan oleh Pimpinan RS.
+                            Seseorang yang melaporkan adanya dugaan perlakuan tidak adil bagi Staf/Karyawan terkait keselamatan pasien yang terjadi di Rumah Sakit Jiwa Prof. HB. Saanin Padang, atau pihak terkait lainnya yang memiliki akses informasi yang memadai atas terjadinya dugaan perlakuan tidak adil. Pelapor dijamin serta diberikan perlindungan oleh Pimpinan RS.
                         </p>
                         <p>
-                            WBS merupakan bagian dari sistem penanganan pengaduan pegawai dan masyarakat terpadu yang memfokuskan pada penanganan dugaan tindak pidana korupsi.
-                        </p>
-                        <p>
-                            Pengaduan dari pegawai dan masyarakat adalah salah satu bentuk peran serta dalam pengawasan terhadap Rumah Sakit Jiwa Prof. HB. Saanin Padang yang perlu mendapatkan tanggapan dengan cepat, tepat dan dapat dipertanggungjawabkan oleh Rumah Sakit Jiwa Prof. HB. Saanin Padang.
+                            Pengaduan dari pegawai tersebut adalah salah satu bentuk peran serta dalam pengawasan terhadap Rumah Sakit Jiwa Prof. HB. Saanin Padang yang perlu mendapatkan tanggapan dengan cepat, tepat dan dapat dipertanggungjawabkan oleh Rumah Sakit Jiwa Prof. HB. Saanin Padang.
                         </p>
                         <p>
                             Kriteria :
                         </p>
                         <ul>
-                            <li><i class="ri-check-double-line"></i> Ada penyimpangan kasus yang dilaporkan</li>
+                            <li><i class="ri-check-double-line"></i> Ada penyimpangan perilaku adil (Just Culture) yang dilaporkan</li>
                             <li><i class="ri-check-double-line"></i> Menjelaskan dimana, kapan kasus tersebut dilakukan</li>
                             <li><i class="ri-check-double-line"></i> Siapa pejabat/pegawai RS. Jiwa Prof. HB. Saanin Padang yang melakukan atau terlibat</li>
                             <li><i class="ri-check-double-line"></i> Bagaimana cara perbuatan tersebut dilakukan</li>
-                            <li><i class="ri-check-double-line"></i> Dilengkapi dengan bukti permulaan (data, dokumen, video, gambar dan rekaman) yang mendukung/menjelaskan adanya dugaan Tindak Pidana Korupsi</li>
+                            <li><i class="ri-check-double-line"></i> Dilengkapi dengan bukti permulaan (data, dokumen, video, gambar dan rekaman) yang mendukung/menjelaskan adanya dugaan penyimpangan perilaku adil (Just Culture)</li>
                         </ul>
                     </div>
                 </div>
@@ -146,7 +144,7 @@
                 <div class="section-title">
                     <h2>Sampaikan Laporan Anda</h2>
                     <p>
-                        <strong>Apabila anda melihat atau mengetahui dugaan Tindak Pidana Korupsi yang dilakukan pegawai di lingkungan Rumah Sakit Jiwa Prof. HB. Saanin Padang. Silahkan melapor ke kanal Whistleblowing System dengan mengisi form di bawah ini.</strong>
+                        <strong>Apabila anda melihat atau mengetahui dugaan Perlakuan Tidak Adil (Just Culture) yang dilakukan pegawai di lingkungan Rumah Sakit Jiwa Prof. HB. Saanin Padang. Silahkan melapor ke Laman Pelaporan Budaya Adil dengan mengisi form di bawah ini.</strong>
                     </p>
                     <p>
                         Jika laporan anda memenuhi syarat/kriteria, maka akan diproses lebih lanjut.
@@ -156,10 +154,10 @@
                 <div class="row">
 
 
-                    <div class="col-lg-5 d-flex align-items-stretch">
+                    <!-- <div class="col-lg-5 d-flex align-items-stretch">
                         <div class="php-email-form">
                             <form method="post" role="form" id="form_pengaduan">
-                                <h5>Indentitas Pelapor</h5>
+                                <h5>Anonymous</h5>
                                 <hr><br>
                                 <div class="form-group">
                                     <label for="name">Nama Pelapor <small><span class="text-danger">*</span></small></label>
@@ -188,9 +186,9 @@
                                 </div>
                                 <small class="text-danger">* Identitas dan Laporan Anda Dijamin Kerahasiaanya</small>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
                         <div class="php-email-form">
                             <h5>Indentitas yang dilaporkan / Pihak terlibat</h5>
                             <hr>
@@ -230,6 +228,14 @@
                                     <small><span class="text-danger" id="error_file_dok_kegiatan"></span></small>
                                 </div>
                                 <small class="text-danger">* file berupa foto dengan format jpg/png</small>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Anonim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Rahasia</label>
                             </div>
                             <div class="mb-3">
                                 <div class="loading">Loading</div>
@@ -272,11 +278,11 @@
                         </ul>
                     </div>
 
-                    
+
 
                     <div class="col-lg-4 col-md-6 footer-links">
                         <h4>Social Networks</h4>
-                        <p>Kunjungi kami :  </p>
+                        <p>Kunjungi kami : </p>
                         <div class="social-links mt-3">
                             <a href="https://www.facebook.com/jiwamobile" class="facebook"><i class="bx bxl-facebook"></i></a>
                             <a href="https://www.instagram.com/rsjsaaninpadang" class="instagram"><i class="bx bxl-instagram"></i></a>
